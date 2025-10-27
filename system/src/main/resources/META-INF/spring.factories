@@ -1,0 +1,9 @@
+org.springframework.boot.env.EnvironmentPostProcessor=\
+org.digyna.axtrion.system.processors.AppPostProcessor
+
+org.springframework.boot.SpringApplicationRunListener=\
+org.digyna.axtrion.system.listener.AxtrionBannerListener
+
+org.springframework.context.ApplicationContextInitializer=\
+org.digyna.axtrion.system.initializer.DefaultProfileInitializer,\
+org.digyna.axtrion.system.initializer.DefaultAppInitializer
