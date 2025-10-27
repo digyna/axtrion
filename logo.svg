@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="412"
+   height="307"
+   viewBox="0 0 412 307"
+   role="img"
+   aria-labelledby="title desc"
+   version="1.1"
+   id="svg9"
+   sodipodi:docname="logo.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs9" />
+  <sodipodi:namedview
+     id="namedview9"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.6547231"
+     inkscape:cx="164.98896"
+     inkscape:cy="155.76012"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="1072"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg9" />
+  <title
+     id="title">Axtrion</title>
+  <desc
+     id="desc">Logotipo Axtrion en color turquesa sobre fondo oscuro, con un símbolo geométrico de circuito dentro de un hexágono.</desc>
+  <g
+     fill="none"
+     stroke="#20C5D1"
+     stroke-width="10.5"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     id="g7">
+    <path
+       d="M198.5 26.5 273.5 69.5 273.5 156.5 198.5 199.5 123.5 156.5 123.5 69.5Z"
+       id="path1"
+       style="stroke:#1bd1de;stroke-opacity:1;fill:#000000;fill-opacity:0" />
+    <path
+       d="M198.5 62.5V88.5"
+       id="path2"
+       style="stroke:#1bd1de;stroke-opacity:1;fill:#000000;fill-opacity:0" />
+    <path
+       d="m 198.5,136.8183 v 28.02698"
+       id="path3"
+       style="stroke-width:10.1488;stroke:#1bd1de;stroke-opacity:1;fill:#000000;fill-opacity:0" />
+    <path
+       d="m 226.5,113.5 h 5.16258 11.30061 l 9.60552,-10.17055 h 15.44418 l 5.17545,-0.18835"
+       id="path5"
+       sodipodi:nodetypes="cccccc"
+       style="stroke:#1bd1de;fill:#000000;fill-opacity:0;stroke-opacity:1" />
+    <path
+       d="m 171.18834,113.5 h -5.16258 -11.30061 l -9.60552,-10.17055 H 129.67545 L 124.5,103.1411"
+       id="path9"
+       sodipodi:nodetypes="cccccc"
+       style="stroke:#1bd1de;stroke-opacity:1;fill:#000000;fill-opacity:0" />
+    <circle
+       cx="198.5"
+       cy="113.5"
+       r="22.5"
+       id="circle5"
+       style="stroke:#1bd1de;stroke-opacity:1;fill:#000000;fill-opacity:0" />
+    <circle
+       cx="198.5"
+       cy="165"
+       r="9.2"
+       id="circle8"
+       style="stroke:#1bd1de;stroke-opacity:1;fill:#000000;fill-opacity:0" />
+    <circle
+       cx="198.5"
+       cy="61.5"
+       r="9.2"
+       id="circle7"
+       style="stroke:#1bd1de;stroke-opacity:1;fill:#000000;fill-opacity:0" />
+  </g>
+  <text
+     x="196"
+     y="276.5"
+     text-anchor="middle"
+     font-family="Arial, Helvetica, sans-serif"
+     font-size="79"
+     font-weight="700"
+     letter-spacing="-2.8"
+     id="text9"
+     style="fill:#1bd1de;fill-opacity:1;stroke:#1bd1de;stroke-opacity:1">Axtrion</text>
+  <metadata
+     id="metadata9">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Axtrion</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>
