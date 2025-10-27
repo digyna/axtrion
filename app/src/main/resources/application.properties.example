@@ -1,0 +1,23 @@
+spring.application.name=axtrion-app
+
+#--------------------------------------------------------------------
+# APP
+#--------------------------------------------------------------------
+
+# Default Locale (one value only, example: en, en-US, es, es-MX)
+#app.default-locale=en-US
+
+# Automatically negotiate locale from Accept-Language header
+#app.negotiate-locale=false
+
+# Application timezone (IANA Time Zone Database)
+#app.timezone=UTC
+
+# Default Character Set (one value only, example: US-ASCII, ISO-8859-1, UTF-8, UTF-16BE, UTF-16LE, UTF-16)
+#app.charset=UTF-8
+
+# Enable or disable application debug mode
+#app.debug=false
+
+# Directory where the application stores writable files, including application logs, cache, temporary files, and generated data
+#app.paths.writable-directory=../writable

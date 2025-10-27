@@ -1,0 +1,3 @@
+org.springframework.context.ApplicationContextInitializer=\
+org.digyna.axtrion.system.initializer.DefaultProfileInitializer,\
+org.digyna.axtrion.system.initializer.DefaultAppInitializer
