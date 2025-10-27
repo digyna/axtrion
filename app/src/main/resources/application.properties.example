@@ -1,0 +1,17 @@
+spring.application.name=axtrion-app
+
+#--------------------------------------------------------------------
+# APP
+#--------------------------------------------------------------------
+
+# Default Locale (one value only, example: en, es)
+#app.default-locale=en
+
+# Automatically negotiate locale from Accept-Language header
+#app.negotiate-locale=false
+
+# Application timezone (IANA Time Zone Database)
+#app.timezone=UTC
+
+# Default Character Set (one value only, example: US-ASCII, ISO-8859-1, UTF-8, UTF-16BE, UTF-16LE, UTF-16)
+#app.charset=UTF-8
