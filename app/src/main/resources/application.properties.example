@@ -15,3 +15,14 @@ spring.application.name=axtrion-app
 
 # Default Character Set (one value only, example: US-ASCII, ISO-8859-1, UTF-8, UTF-16BE, UTF-16LE, UTF-16)
 #app.charset=UTF-8
+
+#--------------------------------------------------------------------
+# DATABASE
+#--------------------------------------------------------------------
+
+#database.default-group=default
+#database.groups.default.hostname=localhost
+#database.groups.default.database=axtrion
+#database.groups.default.username=postgres
+#database.groups.default.password=admin
+#database.groups.default.DBDriver=PostgreSQL
