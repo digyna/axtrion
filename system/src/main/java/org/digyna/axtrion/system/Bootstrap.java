@@ -1,6 +1,12 @@
 package org.digyna.axtrion.system;
 
+import ch.qos.logback.classic.LoggerContext;
 import org.digyna.axtrion.system.config.properties.AppProperties;
+import org.digyna.axtrion.system.config.properties.LoggerProperties;
+import org.digyna.axtrion.system.logger.LogManager;
+import org.digyna.axtrion.system.logger.Logger;
+import org.digyna.axtrion.system.logger.bridge.LogbackAppender;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.context.event.ApplicationEnvironmentPreparedEvent;
 import org.springframework.boot.context.properties.bind.Binder;
 import org.springframework.context.ApplicationListener;
@@ -14,6 +20,7 @@ import static org.digyna.axtrion.system.config.environment.AppEnvironment.PRODUC
 import static org.digyna.axtrion.system.config.environment.AppEnvironment.DEVELOPMENT;
 import static org.digyna.axtrion.system.config.environment.AppEnvironment.TESTING;
 import static org.digyna.axtrion.system.config.environment.AppEnvironment.environment;
+import static org.digyna.axtrion.system.config.environment.AppEnvironment.isProduction;
 import static org.digyna.axtrion.system.config.environment.AppEnvironment.register;
 import static org.digyna.axtrion.system.utils.DateUtils.DEFAULT_DATE_FORMAT;
 
@@ -23,9 +30,15 @@ public class Bootstrap implements ApplicationListener<ApplicationEnvironmentPrep
         ConfigurableEnvironment env = event.getEnvironment();
         injectProfileProperties(env);
         injectAppProperties(env);
+        injectLoggerProperties(env);
 
         AppProperties appProperties = Binder.get(env).bind("app", AppProperties.class).get();
+        LoggerProperties loggerProperties = Binder.get(env).bind("logger", LoggerProperties.class).get();
+
         register(appProperties, AppProperties.class);
+        register(loggerProperties, LoggerProperties.class);
+
+        loggerBridge();
     }
 
     /**
@@ -113,5 +126,36 @@ public class Bootstrap implements ApplicationListener<ApplicationEnvironmentPrep
 
         MapPropertySource propertySource = new MapPropertySource("envAppConfig", properties);
         env.getPropertySources().addLast(propertySource);
+    }
+
+    private void injectLoggerProperties(ConfigurableEnvironment env) {
+        Map<String, Object> properties = new HashMap<>();
+
+        String threshold = isProduction() ? "4" : "9";
+        properties.put("logger.threshold", threshold);
+
+        if (!env.containsProperty("logger.handlers.file.handles")) {
+            properties.put("logger.handlers.file.handles", "emergency,alert,critical,error,warning,notice,info,debug");
+        }
+
+        MapPropertySource propertySource = new MapPropertySource("envLoggerConfig", properties);
+        env.getPropertySources().addLast(propertySource);
+    }
+
+    private void loggerBridge() {
+        Logger axtrionLogger = LogManager.getLogger();
+        LoggerContext context = (LoggerContext) LoggerFactory.getILoggerFactory();
+
+        LogbackAppender bridgeAppender = new LogbackAppender(axtrionLogger);
+        bridgeAppender.setContext(context);
+        bridgeAppender.setName("AXTRION_INTERNAL_BRIDGE");
+        bridgeAppender.start();
+
+        ch.qos.logback.classic.Logger rootLogger = context.getLogger(ch.qos.logback.classic.Logger.ROOT_LOGGER_NAME);
+        rootLogger.detachAppender("CONSOLE");
+
+        if (rootLogger.getAppender("AXTRION_INTERNAL_BRIDGE") == null) {
+            rootLogger.addAppender(bridgeAppender);
+        }
     }
 }

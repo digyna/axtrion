@@ -1,6 +1,7 @@
 package org.digyna.axtrion.system;
 
 import org.digyna.axtrion.system.common.SpringContext;
+import org.digyna.axtrion.system.config.LoggerConfig;
 import org.digyna.axtrion.system.config.environment.AppEnvironmentLoader;
 import org.digyna.axtrion.system.config.properties.AppProperties;
 
@@ -18,6 +19,7 @@ import org.springframework.core.Ordered;
 @Import({
         Starter.class,
         SpringContext.class,
-        AppEnvironmentLoader.class
+        AppEnvironmentLoader.class,
+        LoggerConfig.class
 })
 public class Axtrion {}
